@@ -55,7 +55,7 @@ export default class fechaNacimiento {
     * Metodo de acceso escritura para el atributo fecha. 
     * @param {date} Fecha 
     */
-   setFecha (Fecha){
+   setFecha (fecha){
      if (fecha <= Date.now()){
       this.fecha = fecha;
       return true 
