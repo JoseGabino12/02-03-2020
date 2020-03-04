@@ -13,5 +13,7 @@ export default class Nombre{
     getIniciales(){
         return (`${this.nombre.charAt(0)}${this.apellidoPaterno.charAt(0)}${this.apellidoMaterno.charAt(0)}`)
     }
-
+    setApellidoPaterno(){
+        
+    }
 }

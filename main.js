@@ -1,4 +1,5 @@
 import fechaNacimiento from "./fecha.js"
+import Nombre from "./nombre.js"
 class Main{
     constructor(){
         this.fecha= new fechaNacimiento (3,3,2005);
