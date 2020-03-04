@@ -2,6 +2,8 @@ import fechaNacimiento from "./fecha.js"
 class Main{
     constructor(){
         this.fecha= new fechaNacimiento (3,3,2005);
+        this.nombre1.setApellidoMaterno("Abbsu");
+        this.nombre1 = new Nombre("Morales", "Gonzalez", "Gabino");
     }
     testFechaNacimiento(){
         //lectura de atributo fecha 
@@ -15,6 +17,10 @@ class Main{
         console.log(this.fecha.getFormatoCorto());
         console.log (this.fecha.getFormatoExtendido());
         console.log (this.fecha.getEdad());
+    }
+    testeNombre(){
+        console.log(this.nombre1.getCompleto())
+        console.log(this.nombre1.getCompleto())
     }
 }
 let app = new Main();

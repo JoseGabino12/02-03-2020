@@ -59,7 +59,7 @@ export default class fechaNacimiento {
      if (fecha <= Date.now()){
       this.fecha = fecha;
       return true 
-     }
-     return false 
+     }else{
+     return false }
    }
   }

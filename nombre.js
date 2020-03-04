@@ -1,7 +1,7 @@
 export default class Nombre{
     constructor(nombre,apellidoPaterno,apellidoMaterno){
         this._nomrbe = nombre 
-        this_apellidoPaterno  = apellidoPaterno
+        this._apellidoPaterno  = apellidoPaterno
         this._apellidoMaterno = apellidoMaterno
     }
     getNombreCompleto(){
