@@ -1,7 +1,12 @@
 import fechaNacimiento from "./fecha.js"
 import Nombre from "./nombre.js"
+import { Estudiante } from "./estudiante.js";
+import { Maestro } from "./maestro.js";
+import Grupo from "./grupo.js";
 class Main{
     constructor(){
+        this.fecha2= new fechaNacimiento (3,3,2005);
+        this.nombre3 = new Nombre("Morales", "Gonzalez", "Gabino");
         
     }
     testFechaNacimiento(){
@@ -24,6 +29,36 @@ class Main{
         console.log(this.nombre1.getCompleto())
         this.nombre1 = new Nombre("Morales", "Gonzalez", "Gabino");
     }
+    testEstudiante(){
+        let e = new Estudiante(new Nombre("Gabino", "Morales", "Gonzalez"),new fechaNacimiento(30,10,2020)
+        ,"Masculino",20164899, "jmorales18@ucol.mx", "Facultad de telematica")
+        e.print()
+    }
+    testMaestro(){
+        let m = new Maestro(
+            new Nombre("Alfredo", "Gonzalez", "Leyva"),
+            new fechaNacimiento(20,10,2020),
+            "Masculino",
+            2000,
+            20164748,
+            "Tiempo Completo"
+        )
+
+        m.print()
+    }
+    testGrupo(){
+        let e = new Estudiante(new Nombre("Gabino", "Morales", "Gonzalez"),new fechaNacimiento(30,10,2020)
+        ,"Masculino",20164899, "jmorales18@ucol.mx", "Facultad de telematica")
+        let e1 = new Estudiante(new Nombre("Jose", "Gonzalo", "Leyva"),new fechaNacimiento(30,10,2020)
+        ,"Masculino",20164899, "jmorales18@ucol.mx", "Facultad de telematica")
+
+        let g = new Grupo(2,"G")
+
+       console.log(g.registrar(e))
+       console.log(g.registrar(e))
+       console.log(g.registrar(e))
+        g.listarAlumnos()
+    }
 }
 let app = new Main();
-app.testFechaNacimiento();
+app.testGrupo();
