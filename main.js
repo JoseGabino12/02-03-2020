@@ -24,10 +24,11 @@ class Main{
         console.log (this.fecha.getEdad());
     }
     testeNombre(){
+        this.nombre1 = new Nombre("Morales", "Gonzalez", "Gabino");
         this.nombre1.setApellidoMaterno("Abbsu");
         console.log(this.nombre1.getCompleto())
         console.log(this.nombre1.getCompleto())
-        this.nombre1 = new Nombre("Morales", "Gonzalez", "Gabino");
+       
     }
     testEstudiante(){
         let e = new Estudiante(new Nombre("Gabino", "Morales", "Gonzalez"),new fechaNacimiento(30,10,2020)
@@ -57,8 +58,17 @@ class Main{
 
         }
         let e = new Estudiante(datosEstudiante)
-        let e1 = new Estudiante(new Nombre("Jose", "Gonzalo", "Leyva"),new fechaNacimiento(12,10,1999)
-        ,"Masculino",20164555, "gleyva12@ucol.mx", "Facultad de telematica")
+
+        let datosEstudiante1 = {
+            nombre: new Nombre("Jose", "Gonzalo", "Leyva"),
+            fechaNacimiento: new fechaNacimiento(12,10,1999),
+            genero: "Masculino",
+            nCuenta: 20164555, 
+            correo: "gleyva12@ucol.mx", 
+            escuela: "Facultad de telematica"
+        }
+
+        let e1 = new Estudiante(datosEstudiante1)
 
         let g = new Grupo(2,"G")
     
