@@ -47,18 +47,34 @@ class Main{
         m.print()
     }
     testGrupo(){
-        let e = new Estudiante(new Nombre("Gabino", "Morales", "Gonzalez"),new fechaNacimiento(30,10,2020)
-        ,"Masculino",20164899, "jmorales18@ucol.mx", "Facultad de telematica")
-        let e1 = new Estudiante(new Nombre("Jose", "Gonzalo", "Leyva"),new fechaNacimiento(30,10,2020)
-        ,"Masculino",20164899, "jmorales18@ucol.mx", "Facultad de telematica")
+        let datosEstudiante = {
+            nombre: new Nombre("Gabino", "Morales", "Gonzalez"), 
+            fechaNacimiento: new fechaNacimiento(30,10,2020),
+            genero: "Masculino",
+            nCuenta: 20164899,
+            correo: "jmorales18@ucol.mx",
+            escuela: "Facultad de telematica"
+
+        }
+        let e = new Estudiante(datosEstudiante)
+        let e1 = new Estudiante(new Nombre("Jose", "Gonzalo", "Leyva"),new fechaNacimiento(12,10,1999)
+        ,"Masculino",20164555, "gleyva12@ucol.mx", "Facultad de telematica")
 
         let g = new Grupo(2,"G")
+    
+       console.log(g.registrar(e))
+       console.log(g.registrar(e1))
 
-       console.log(g.registrar(e))
-       console.log(g.registrar(e))
-       console.log(g.registrar(e))
-        g.listarAlumnos()
+       console.log(g._encontrarEstudiante(e1))
+       console.log(g._encontrarEstudiante(e))
+       console.log(g._encontrarIndiceEstudiante(e))
+
+       g.listarAlumnos()
+    //    console.log(g.elimanr(e))
+       console.log(g.actualizar(e, e1))
+       g.listarAlumnos()
     }
+
 }
 let app = new Main();
 app.testGrupo();
